@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bom</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+	<!-- 定义一个事件源。通过对事件源的触发，获取想要的结果。比如让用户通过点击按钮就可以知道浏览器的一些信息 -->
+	
+	<!-- 定义按钮onclick事件的处理方式 -->
+	<script type="text/javascript">
+		//定义一函数
+		function windowObjDemo(){
+		var name = window.navigator.appName;
+		var version = window.navigator.appVersion;
+		document.write(name+":"+version);		//获取浏览器信息，需要window对象中的navigator
+		}
+		//演示location
+		function windowObjDemo2(){
+			// var prop = location.protocol;
+			// var text = location.href;
+			// alert(text);
+			location.href="http:www.sina.com.cn"
+		}
+	</script>
+
+	<!-- 定义事件源，注册事件关联的动作 -->
+	<input type="button" value="演示windows中的对象" onclick="windowObjDemo2()"/>
+</body>
+</html>

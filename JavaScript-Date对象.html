@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Date</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+	<script type="text/javascript">
+		var date = new Date();
+		document.write(date.toLocaleString());//日期和时间
+		document.write("<br>");
+		document.write(date.toLocaleDateString());//只有日期
+		document.write("<br>");
+		var year = date.getFullYear();
+		var month = date.getMonth()+1;
+		var day = date.getDate();
+		var week = date.getDay();
+		document.write(year+"-"+month+"-"+day+"-"+week);
+		document.write("<br>");
+		//日期对象和毫秒值之间的转换
+		var date2 = new Date();
+		var time = date2.getTime();
+		document.write(time);
+		//讲毫秒值转成日期对象
+		//1.new Date(time);2.setTime()
+		var date3 = new Date(time);
+		
+	</script>
+</body>
+</html>

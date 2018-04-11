@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>通过节点关系获取节点</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+		<!-- 父节点：parentNode 对应一个节点对象
+			 子节点： childNodes 对应一个节点集合
+			 兄弟节点：
+				上一个兄弟节点：previoutSibling
+				下一个兄弟节点：nextSibling -->
+	<script type="text/javascript">
+		//获取页面中表格节点
+		function getNodeByLevel(){
+			var tabNode = document.getElementById("table");
+			//获取父节点 parentNode
+			var node = tabNode.parentNode;
+			alert(node.nodeName);
+
+			//获取子节点
+			var node1 = tabNode.childNodes;
+			alert(node1[0].childNodes[0].nodeName);
+
+			//获取兄弟节点
+			var node2 = tabNode.previousSibling;
+			alert(node2.nodeName);
+			var node3 = tabNode.nextSibling;
+			alert(node3.nodeName);
+		}
+	</script>
+	<input type="button" value="通过节点层次关系获取节点" onclick="getNodeByLevel()">
+	<div>div区域</div>
+	<table id="table">
+		<tr>
+			<td>单元格一</td>
+			<td>单元格二</td>
+		</tr>
+	</table>
+	<dl>
+		<dt>上层目录</dt>
+		<dd>下层目录</dd>
+	</dl>
+	<a href="">一个超链接</a>
+</body>
+</html>

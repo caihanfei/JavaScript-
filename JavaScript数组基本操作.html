@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>数组</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+	<script type="text/javascript">
+	var arr = ["afs","wgwg","weeg","abc"];
+	var arr2 = ["qq","xiao"];
+	document.write(arr);
+	document.write("<br>");
+	document.write(arr2);
+	document.write("<br>");
+	//在arr数组上连接一个元素“mm”,再连接一个arr数组
+	var newArr = arr.concat("mm",arr2);
+	document.write(newArr);
+	document.write("<br>");
+	document.write(arr.join("-"));//数组变成字符串元素之间用-隔开
+	//移除数组中的元素，并返回该元素，pop(shift移除第一个返回该元素)
+	document.write("<br>");
+	document.write(arr.pop());
+	document.write("<br>");
+	document.write(arr);
+	document.write("<br>");
+	//将新元素添加到一个数组中，并返回数组的新长度值 push
+	// arr3.push(arra,arrb,arrc);
+	// var arr3 = [arra,arrb,arrc];
+	//slice 返回一个数组的一段
+	//splice删除一段元素，并替换元素，返回被删除的元素
+	var = temp = arr.splice(1,3,"wg",564,12,"wgwg");//删除1,2,3角标元素，添加之后的元素
+	//unshift方法 添加一个元素在数组头
+	</script>
+</body>
+</html>

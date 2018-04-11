@@ -1,0 +1,104 @@
+<!DOCTYPE html>                          <!-- 无法实现 -->
+<html>
+<head>
+	<title>好友菜单</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<style type="text/css">
+		table ul{
+			list-style:none;/*去掉圆点*/
+			margin: 0px;
+			background-color: #26e356;
+			display: none;
+		}
+		table{
+			border: #8080ff 1px solid;
+			widows: 80px;
+			
+		}
+		table td{
+			border: #8080ff 1px solid;
+			background-color: #f3c98f;
+		}
+		table td a:link, table td a:visited {
+			color: #1f6df1;
+			text-decoration: none;/*去除下划线*/
+		}
+		table td a: hover{
+			color: #df4010;
+		}
+		.open{
+			display: block;
+		}
+		.close{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		//获取ul节点
+		//通过事件源超链接标签获取父节点td，通过父节点获取ul节点
+		function list(node){
+			var oTdNode = node.parentNode;
+			var oUlNode = oTdNode.getElementsByTagName("ul")[0];
+			// alert(oUlNode);
+			if(oUlNode.className =="open"){
+				oUlNode.className = "close";
+				}
+				else{
+					oUlNode = "open";
+				}
+			
+		}
+	</script>
+	<table>
+		<tr>
+			<td>
+				<a href="javascript:void(0)" onclick="list(this)">好友菜单</a>
+				<ul>
+					<li>一个好友</li>
+					<li>一个好友</li>
+					<li>一个好友</li>
+					<li>一个好友</li>
+					<li>一个好友</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="javascript:void(0)" onclick="list(this)">好友菜单</a>
+				<ul>
+					<li>一个好友</li>
+					<li>一个好友</li>
+					<li>一个好友</li>
+					<li>一个好友</li>
+					<li>一个好友</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="javascript:void(0)" onclick="list(this)">好友菜单</a>
+				<ul>
+					<li>一个好友</li>
+					<li>一个好友</li>
+					<li>一个好友</li>
+					<li>一个好友</li>
+					<li>一个好友</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="javascript:void(0)" onclick="list(this)">好友菜单</a>
+				<ul>
+					<li>一个好友</li>
+					<li>一个好友</li>
+					<li>一个好友</li>
+					<li>一个好友</li>
+					<li>一个好友</li>
+				</ul>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

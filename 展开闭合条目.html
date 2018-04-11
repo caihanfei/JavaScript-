@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>展开闭合条目</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<style type="text/css">
+		dl dd{
+			margin: 0px;
+		}
+		dl{
+			height: 16px;
+			overflow: hidden;/*超出16px高度部分隐藏*/
+		}
+		.open{
+			overflow: visible;
+		}
+		.close{
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		// var flag = true;
+		function list(){
+			var dtNode = document.getElementsByTagName("dl")[0];
+			// var dtNode = document.getElementById("dtt"); 错误
+			// if(flag){
+			// 	dtNode.style.overflow = "visible"
+			// 	flag = false;
+			// }
+			// else{
+			// 	dtNode.style.overflow = "hidden"
+			// 	flag = true;
+			// }
+			if(dtNode.className == "close")
+				dtNode.className = "open";
+			else
+				dtNode.className = "close";
+			
+			
+		}
+	</script>
+	<dl>
+		<dt  class="close" onclick="list()"  >展示条目一</dt>
+		<dd>展开列表内容1</dd>
+		<dd>展开列表内容1</dd>
+		<dd>展开列表内容1</dd>
+		<dd>展开列表内容1</dd>
+		<dt  class="close" onclick="list()"  >展示条目二</dt>
+		<dd>展开列表内容2</dd>
+		<dd>展开列表内容2</dd>
+		<dd>展开列表内容2</dd>
+		<dd>展开列表内容2</dd>
+		<dt  class="close" onclick="list()"  >展示条目三</dt>
+		<dd>展开列表内容3</dd>
+		<dd>展开列表内容3</dd>
+		<dd>展开列表内容3</dd>
+		<dd>展开列表内容3</dd>
+	</dl>
+</body>
+</html>

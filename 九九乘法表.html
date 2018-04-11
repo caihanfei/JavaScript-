@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>乘法表</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<style type="text/css">
+		table td{
+			border: #0000ff solid 1px;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		document.write("<table>");
+		for(var x=1;x<=9;x++){
+			document.write("<tr>");
+			for(var y=1;y<=x;y++){
+				document.write("<td>"+y+"*"+x+"="+y*x+"</td>");
+			}
+			document.write("<br>");
+		}
+		document.write("</table>");
+	</script>
+</body>
+</html>

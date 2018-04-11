@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS函数</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+</head>
+<body>
+	<script type="text/javascript">
+		// function add0(x,y){
+		// 	return x+y;
+		// }
+		// var sum = add(4,5);
+		// alert(sum);
+		
+
+		//动态函数
+		var add = new Function("x,y","var sum;sum=x+y;return sum;");
+		var sum = add(4,8);
+		alert(sum);
+	</script>
+</body>
+</html>

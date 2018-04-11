@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>演示document对象获取节点</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+	<script type="text/javascript">
+		function getNodeDemo(){
+			//获取页面中的div节点,通过document对象完成
+			var divNode = document.getElementById("divid");
+			//节点有三个必备属性，节点名称，节点类型，节点值。
+			alert(divNode.nodeName+":"+divNode.nodeType+":"+divNode.nodeValue);
+			//三种常见节点 1，标签型节点 2，属性节点 3，文本节点
+			// 标签型节点没有值，属性和文本节点可以有值
+			var text = divNode.innerHTML;
+			alert(text);
+			divNode.innerHTML = "改变文本";
+				}
+			//获取文本框节点演示getelementbyname方法
+			function getNodeDemo2(){
+				var nodes = document.getElementsByName("user");
+				alert(nodes[0].type)//name值可能相同，所以返回一个数组
+			}
+
+			//获取超链接节点对象。演示getelementbytagname方法。
+			function getNodeDemo3(){
+				//直接用标签名获取。因为标签名会重复，所以返回数组
+				var nodes = document.getElementsByTagName("a");
+				// alert(nodes[0].innerHTML);
+				for(var x=0;nodes.length;x++){
+					nodes[x].target="_blank";
+				}
+				
+			}
+		
+	</script>
+	<input type="button" value="演示document对象获取节点" onclick="getNodeDemo3()">
+	<div id="divid">div区域</div>
+	<input type="text" name="user">
+	<a href="http://www.baidu.com">百度</a>
+	<a href="http://www.sina.com">新浪</a>
+	<a href="http://www.SOHU.com">搜狐</a>
+</body>
+</html>

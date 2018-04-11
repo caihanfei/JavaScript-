@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>自定义对象</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+		<script type="text/javascript">
+			function Person(name,age){
+				this.name = name;
+				this.age = age;
+				function show(){
+					document.write(this.name+":"+this.age);
+				}
+				function getName(){
+					return this.name;
+				}
+				function setName(name){
+					this.name = name;
+				}
+			}
+			var p = new Person("caihanfei",18);
+			for(x in p){
+				document.write(x+":"+p[x]);
+				document.write("<br>");
+			}
+			document.write(p.name);
+			var myobj ={
+				myname:"penglu",myage:"18"
+			}
+			document.write("<br>");
+			document.write(myobj["myname"]);
+		</script>
+</body>
+</html>

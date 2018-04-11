@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>表格</title></title><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<style type="text/css">
+		@import url(table.css);
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		function crttable(){
+			//第一种方法
+			// var tabNode = document.createElement("table");
+			// var bodyNode = document.createElement("tbody");
+			// var trNode = document.createElement("tr");
+			// var tdNode = document.createElement("td");
+			// tdNode.innerHTML = ("这是单元格");
+			// trNode.appendChild(tdNode);
+			// bodyNode.appendChild(trNode);
+			// tabNode.appendChild(bodyNode);
+			// document.getElementsByTagName('div')[0].appendChild(tabNode);
+
+			
+			//第二种方法
+			var tabNode = document.createElement("table");
+			var row = parseInt(document.getElementsByName("rownum")[0].value);
+			var col = parseInt(document.getElementsByName("colnum")[0].value);
+
+			for(var x=1;x<=row;x++){
+				var trNode = tabNode.insertRow();
+				for (var y=1; y<=col;y++){
+					var tdNode = trNode.insertCell();
+					tdNode.innerHTML = x+"--"+y
+				}
+			}
+			document.getElementsByTagName('div')[0].appendChild(tabNode);
+			document.getElementsByName("crtTable")[0].disabled = true;
+		}
+	</script>
+	行：<input type="text" name="rownum"> 列：<input type="text" name="colnum">
+	<input type="button" value="创建一个表格" onclick="crttable()" name="crtTable">
+	<hr>
+	<div></div>
+</body>
+</html>
